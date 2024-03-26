@@ -6,9 +6,9 @@ export default function HeroPage() {
   return (
     <>
     <Navbar/> 
-    <div className="h-screen flex flex-col gap-32 justify-center items-center  w-screen bg-inherit"> 
+    <div className="h-screen mb-10 ml-0 flex flex-col gap-32 justify-center items-center  w-screen bg-inherit"> 
     
-    <div className="absolute -z-1 w-full h-full">
+    <div className="absolute flex justify-center  w-full h-full">
     <Image fill src={HeroBg} alt="Home Page Image"/>
     </div>
     <h1 className="text-8xl z-10 font-bold font-codec ">Purpose <span className="-ml-6 text-9xl text-blue-400">.</span></h1>
