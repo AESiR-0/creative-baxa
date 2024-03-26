@@ -31,3 +31,25 @@ body {
     text-wrap: balance;
   }
 }
+
+
+@font-face {
+  font-family: 'Codec';
+  src: url('../fonts/CodecPro-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec';
+  src: url('../fonts/CodecPro-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Codec';
+  src: url('../fonts/CodecPro-Thin.otf');
+  font-weight: thin;
+  font-style: normal;
+}
