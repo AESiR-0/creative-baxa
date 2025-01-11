@@ -1,31 +1,31 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
+import { Reenie_Beanie } from "next/font/google";
 import "./globals.css";
+import { Outfit } from "next/font/google";
 
-const codecPro = localFont({
-  src: [{path : "../fonts/CodecPro-Thin.otf", weight:'200', style:'normal'},
-        {path : "../fonts/CodecPro-Regular.otf", weight:'500', style:'normal'},
-        {path : "../fonts/CodecPro-Bold.otf", weight:'700', style:'normal'},
-      ],
+const outfit = Outfit({
+  subsets: ["latin"],
   display: "swap",
-  variable: "--font-codec",
+  variable: "--font-outfit",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
-
-
-export const metadata: Metadata = {
-  title: "Home",
-  description: "Creative baxa is a creative agency that helps businesses grow their brand and reach their audience. We offer a wide range of services including web design, branding, and marketing. We are a team of passionate and creative individuals who are dedicated to helping businesses succeed. Our goal is to provide our clients with the best possible solutions to help them achieve their goals. We are committed to delivering high-quality work that is both creative and effective. We believe in building strong relationships with our clients and working together to create something amazing. We are passionate about what we do and we are excited to help you grow your business. Let us help you take your business to the next level!",
-};
+const reenieBeanie = Reenie_Beanie({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-reenie",
+  weight: ["400"],
+});
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={codecPro.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${reenieBeanie.variable} antialiased overflow-x-hidden `}
+    >
+      <body>{children}</body>
     </html>
   );
 }
